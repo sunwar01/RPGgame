@@ -1,27 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SW\\RiderProjects\\CotsrRPG\\CotsrRPG\\CotsrRPG.csproj": {}
+    "C:\\Users\\SW - Gaming\\RiderProjects\\RPGgame\\CotsrRPG\\CotsrRPG.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SW\\RiderProjects\\CotsrRPG\\CotsrRPG\\CotsrRPG.csproj": {
+    "C:\\Users\\SW - Gaming\\RiderProjects\\RPGgame\\CotsrRPG\\CotsrRPG.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SW\\RiderProjects\\CotsrRPG\\CotsrRPG\\CotsrRPG.csproj",
+        "projectUniqueName": "C:\\Users\\SW - Gaming\\RiderProjects\\RPGgame\\CotsrRPG\\CotsrRPG.csproj",
         "projectName": "CotsrRPG",
-        "projectPath": "C:\\Users\\SW\\RiderProjects\\CotsrRPG\\CotsrRPG\\CotsrRPG.csproj",
-        "packagesPath": "C:\\Users\\SW\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SW\\RiderProjects\\CotsrRPG\\CotsrRPG\\obj\\",
+        "projectPath": "C:\\Users\\SW - Gaming\\RiderProjects\\RPGgame\\CotsrRPG\\CotsrRPG.csproj",
+        "packagesPath": "C:\\Users\\SW - Gaming\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SW - Gaming\\RiderProjects\\RPGgame\\CotsrRPG\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
-        ],
         "configFilePaths": [
-          "C:\\Users\\SW\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\SW - Gaming\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -61,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

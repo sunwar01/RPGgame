@@ -14,19 +14,22 @@ public int Damage { get; set; }
     
     public int BuyPrice { get; set; }
     
+    public bool IsEquipped { get; set; }
+    
     // Loot/Default items constructor
-    public Weapon(string name, int level, string rarity, int damage, int criticalChance, int criticalDamage, int accuracy, int sellPrice) : base(name, level, rarity)
+    public Weapon(string name, int level, string rarity, int damage, int criticalChance, int criticalDamage, int accuracy, int sellPrice, bool isEquipped) : base(name, level, rarity)
     {
         this.Damage = damage;
         this.CriticalChance = criticalChance;
         this.CriticalDamage = criticalDamage;
         this.Accuracy = accuracy;
         this.SellPrice = sellPrice;
+        this.IsEquipped = isEquipped;
         
     }
     
     // Shop items constructor
-    public Weapon(string name, int level, string rarity, int damage, int criticalChance, int criticalDamage, int accuracy, int sellPrice, int buyPrice) : base(name, level, rarity)
+    public Weapon(string name, int level, string rarity, int damage, int criticalChance, int criticalDamage, int accuracy, int sellPrice, int buyPrice, bool isEquipped) : base(name, level, rarity)
     {
         this.Damage = damage;
         this.CriticalChance = criticalChance;
@@ -34,6 +37,7 @@ public int Damage { get; set; }
         this.Accuracy = accuracy;
         this.SellPrice = sellPrice;
         this.BuyPrice = buyPrice;
+        this.IsEquipped = isEquipped;
         
     }
     
