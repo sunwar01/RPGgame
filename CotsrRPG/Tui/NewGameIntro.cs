@@ -1,4 +1,6 @@
-﻿namespace CotsrRPG.Tui;
+﻿using CotsrRPG.Game;
+
+namespace CotsrRPG.Tui;
 
 public class NewGameIntro
 {
@@ -6,6 +8,8 @@ public class NewGameIntro
 
     public void initializeNewGameIntro()
     {
+     
+       
         
         
         
@@ -28,6 +32,9 @@ public class NewGameIntro
         Console.WriteLine("Your first task, is to go to the local shop in the town, and buy a weapon and some food.");
         
         Thread.Sleep(10000);
+
+        var gameMenu = new GameMenu();
+        gameMenu.initializeGameMenu(true);
         
         
 

@@ -39,7 +39,10 @@ public class MainMenu
             Console.Clear();
             break;
          default:
-            //Do the loop again
+            Console.WriteLine("Wrong input, try again");
+            Thread.Sleep(2000);
+            
+            
             Console.Clear();
             initializeMainMenu();
             break;

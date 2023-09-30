@@ -1,4 +1,6 @@
-﻿namespace CotsrRPG.Tui;
+﻿using CotsrRPG.Game;
+
+namespace CotsrRPG.Tui;
 
 public class NewGame
 {
@@ -12,8 +14,7 @@ public class NewGame
         string saveName;
         string playerName; 
         
-        List<Weapon> weapons = new List<Weapon>();
-        List<Food> food = new List<Food>();
+      
         
       
         Console.WriteLine("Write name of the new game");
@@ -29,14 +30,10 @@ public class NewGame
         userInput = Console.ReadLine();
         
         playerName = userInput;
-
-        var newInventory = new Inventory(weapons, food);
         
-        var newPlayer = new Player(playerName, 1, 100, 10, 10, 10, 50, 0, 10, null, newInventory);
-
-        var json = new Json.Json();
+        var gamedata = GameData.GetInstance();
         
-          json.createNewGame(saveName, newPlayer, newInventory);
+         gamedata.createNewGame(saveName, playerName);
 
          Console.Clear();
         
