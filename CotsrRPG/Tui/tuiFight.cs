@@ -11,19 +11,17 @@ public class tuiFight
         
         var userInput = Console.ReadLine();
         
+        var level = new Level();
+        
         switch (userInput)
         {
             case "1":
                 Console.Clear();
-                var level = new Level();
                 level.Everwood_training();
                 break;
             case "2":
                 Console.Clear();
-                Console.WriteLine("Not implemented yet");
-                Thread.Sleep(2000);
-                Console.Clear();
-                InitializeFightMenu();
+                level.Everwood_Forest();
                 break;
             default:
                 Console.WriteLine("Wrong input, try again");

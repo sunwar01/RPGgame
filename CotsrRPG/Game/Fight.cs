@@ -1,4 +1,6 @@
-﻿namespace CotsrRPG.Game;
+﻿using CotsrRPG.Tui;
+
+namespace CotsrRPG.Game;
 
 public class Fight
 {
@@ -33,11 +35,25 @@ public class Fight
         var playerAccuracy = player.Accuracy;
         
         var enemyAccuracy = enemy.Accuracy;
+        
+        var playerExperience = player.Experience;
+        
+        var enemyExperience = enemy.Experience;
+        
+        var playerGold = player.Gold;
+        
+        var enemyGold = enemy.Gold;
+        
+        
+        
+        var gameMenu = new GameMenu();
+        
+        
 
 
-        while (playerHealth > 0 && enemyHealth > 0)
+        while (player.Health > 0 && enemy.Health > 0)
         {
-            if (playerturn)
+            if (playerturn && !isFightOver)
             {
                 Console.WriteLine("Player turn");
                 Console.WriteLine("Press 1 to attack");
@@ -58,11 +74,12 @@ public class Fight
                         {
                             enemy.Health = enemyHealth - playerDamage;
                             Console.WriteLine($"Player attacks for {playerDamage} damage");
-                            Console.WriteLine($"Enemy health: {enemyHealth}");
+                            Console.WriteLine($"Enemy health: {enemy.Health}");
                             Thread.Sleep(2000);
                             Console.Clear();
                             playerturn = false;
                             enemyTurn = true;
+                            enemyHealth = enemy.Health;
                         }
                         else
                         {
@@ -82,11 +99,12 @@ public class Fight
                             player.Health = playerHealth + food.Health;
                             Console.WriteLine($"Player consumed {food.Name} and gained {food.Health} health");
                             gamedata.gameDataInventory.Food.Remove(food);
-                            Console.WriteLine($"Player health: {playerHealth}");
+                            Console.WriteLine($"Player health: {player.Health}");
                             Thread.Sleep(2000);
                             Console.Clear();
                             playerturn = false;
                             enemyTurn = true;
+                            playerHealth = player.Health;
                         }
                         else
                         {
@@ -104,15 +122,41 @@ public class Fight
                         break;
                 }
                 
+            }
+            
+            if (enemy.Health <= 0)
+            {
+                Console.WriteLine("You won");
+               
+                player.Experience = playerExperience + enemyExperience;
+                
+                var leveling = new Leveling();
+                
+                leveling.checkLevelUp(player);
+                
+                player.Gold = playerGold + enemyGold;
+                
+                Console.WriteLine("you gained " + enemyExperience + " experience");
+                
+                Console.WriteLine("you gained " + enemyGold + " gold");
+                
+                
+                Thread.Sleep(2000);
+                Console.Clear();
+                isFightOver = true;
+                
+             
                 
                 
                 
                 
-
+                
+                
+                gameMenu.initializeGameMenu(false);
             }
             
             
-            if (enemyTurn)
+            if (enemyTurn && !isFightOver)
             {
                 Console.WriteLine("Enemy turn");
            
@@ -123,11 +167,12 @@ public class Fight
                 {
                     player.Health = playerHealth - enemyDamage;
                     Console.WriteLine($"Enemy attacks for {enemyDamage} damage");
-                    Console.WriteLine($"Player health: {playerHealth}");
+                    Console.WriteLine($"Player health: {player.Health}");
                     Thread.Sleep(2000);
                     Console.Clear();
                     enemyTurn = false;
                     playerturn = true;
+                    playerHealth = player.Health;
                 }
                 else
                 {
@@ -138,28 +183,26 @@ public class Fight
                     playerturn = true;
                 }
             }
-
-
-        }
-        
-        
-        if (playerHealth <= 0)
-        {
-            Console.WriteLine("You died");
             
-            Thread.Sleep(2000);
-            Console.Clear();
-            isFightOver = true;
-        }
-        else if (enemyHealth <= 0)
-        {
-            Console.WriteLine("You won");
-            //Leveling implementation
-            Thread.Sleep(2000);
-            Console.Clear();
-            isFightOver = true;
+            if (player.Health <= 0)
+            {
+                Console.WriteLine("You died");
+                
+                player.Health = 100;
+                Console.WriteLine("Your hp has been reset");
+                
+                player.Experience = 0;
+                Console.WriteLine("You lost all your experience");
+            
+                Thread.Sleep(2000);
+                Console.Clear();
+                isFightOver = true;
+                gameMenu.initializeGameMenu(false);
+            
+            }
+
+
         }
         
-    
     }
 }

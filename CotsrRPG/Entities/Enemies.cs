@@ -17,7 +17,9 @@ public class Enemies
     
     public int Experience { get; set; }
     
-    public Enemies(string name, int level,  int health, int damage, int criticalChance, int criticalDamage, int accuracy, int experience)
+    public int Gold { get; set; }
+    
+    public Enemies(string name, int level,  int health, int damage, int criticalChance, int criticalDamage, int accuracy, int experience, int gold)
     {
         this.Name = name;
         this.Level = level; 
@@ -27,5 +29,6 @@ public class Enemies
         this.CriticalDamage = criticalDamage;
         this.Accuracy = accuracy;
         this.Experience = experience;
+        this.Gold = gold;
     }
 }

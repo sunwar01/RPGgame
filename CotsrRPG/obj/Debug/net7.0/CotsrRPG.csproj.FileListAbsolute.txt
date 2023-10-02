@@ -28,3 +28,18 @@ C:\Users\SW - Gaming\RiderProjects\RPGgame\CotsrRPG\obj\Debug\net7.0\refint\Cots
 C:\Users\SW - Gaming\RiderProjects\RPGgame\CotsrRPG\obj\Debug\net7.0\CotsrRPG.pdb
 C:\Users\SW - Gaming\RiderProjects\RPGgame\CotsrRPG\obj\Debug\net7.0\CotsrRPG.genruntimeconfig.cache
 C:\Users\SW - Gaming\RiderProjects\RPGgame\CotsrRPG\obj\Debug\net7.0\ref\CotsrRPG.dll
+C:\Users\SW\RiderProjects\RPGgame\CotsrRPG\bin\Debug\net7.0\CotsrRPG.exe
+C:\Users\SW\RiderProjects\RPGgame\CotsrRPG\bin\Debug\net7.0\CotsrRPG.deps.json
+C:\Users\SW\RiderProjects\RPGgame\CotsrRPG\bin\Debug\net7.0\CotsrRPG.runtimeconfig.json
+C:\Users\SW\RiderProjects\RPGgame\CotsrRPG\bin\Debug\net7.0\CotsrRPG.dll
+C:\Users\SW\RiderProjects\RPGgame\CotsrRPG\bin\Debug\net7.0\CotsrRPG.pdb
+C:\Users\SW\RiderProjects\RPGgame\CotsrRPG\obj\Debug\net7.0\CotsrRPG.csproj.AssemblyReference.cache
+C:\Users\SW\RiderProjects\RPGgame\CotsrRPG\obj\Debug\net7.0\CotsrRPG.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SW\RiderProjects\RPGgame\CotsrRPG\obj\Debug\net7.0\CotsrRPG.AssemblyInfoInputs.cache
+C:\Users\SW\RiderProjects\RPGgame\CotsrRPG\obj\Debug\net7.0\CotsrRPG.AssemblyInfo.cs
+C:\Users\SW\RiderProjects\RPGgame\CotsrRPG\obj\Debug\net7.0\CotsrRPG.csproj.CoreCompileInputs.cache
+C:\Users\SW\RiderProjects\RPGgame\CotsrRPG\obj\Debug\net7.0\CotsrRPG.dll
+C:\Users\SW\RiderProjects\RPGgame\CotsrRPG\obj\Debug\net7.0\refint\CotsrRPG.dll
+C:\Users\SW\RiderProjects\RPGgame\CotsrRPG\obj\Debug\net7.0\CotsrRPG.pdb
+C:\Users\SW\RiderProjects\RPGgame\CotsrRPG\obj\Debug\net7.0\CotsrRPG.genruntimeconfig.cache
+C:\Users\SW\RiderProjects\RPGgame\CotsrRPG\obj\Debug\net7.0\ref\CotsrRPG.dll

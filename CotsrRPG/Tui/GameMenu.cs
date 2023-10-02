@@ -29,7 +29,8 @@ public class GameMenu
     
     public void initializeGameMenu(bool isIntro)
     {
-        
+
+        var leveling = new Leveling();
        
 
         if (isIntro)
@@ -40,6 +41,8 @@ public class GameMenu
             Console.WriteLine("Your first task is to buy a weapon and some food, it is probably your only task, because i am to lazy :)");
             Console.WriteLine("Write (2) in the console, to enter the shop!");
         }
+        
+        Console.WriteLine("Gold: " + gamedata.gameDataPlayer.Gold + " Health: " + gamedata.gameDataPlayer.Health + " Level: " + gamedata.gameDataPlayer.Level + " Experience: " + gamedata.gameDataPlayer.Experience + "/" + leveling.CalculateExperienceToLevelUp(gamedata.gameDataPlayer.Level));
         
         Console.WriteLine("1. Fight");
         if (isIntro)
@@ -67,6 +70,10 @@ public class GameMenu
                 }
                 
                 // Fight
+                Console.Clear();
+                tuiFight tuiFight = new tuiFight();
+                
+                tuiFight.InitializeFightMenu();
                 
                 break;
             case "2":

@@ -22,6 +22,15 @@ public class GameData
 
     public void createNewGame(string saveGameName, string playerName)
     {
+
+        if (!Directory.Exists(path))
+        {
+            Directory.CreateDirectory(path); 
+        }
+            
+        
+        
+        
         string saveGame = Path.Combine(path, saveGameName + ".json");
         
         List<Weapon> weapons = new List<Weapon>();
