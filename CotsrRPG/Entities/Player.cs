@@ -1,4 +1,6 @@
-﻿namespace CotsrRPG;
+﻿using System.Text.Json.Serialization;
+
+namespace CotsrRPG;
 
 public class Player
 {
@@ -19,12 +21,12 @@ public class Player
     public int Experience { get; set; }
     
     public int Gold { get; set; }
-
-    public Weapon Weapon;
     
+    [JsonIgnore]
     public Inventory Inventory;
     
-    public Player(string name, int level, int health, int damage, int criticalChance, int criticalDamage, int accuracy, int experience, int gold, Weapon weapon, Inventory inventory)
+    [JsonConstructor]
+    public Player(string name, int level, int health, int damage, int criticalChance, int criticalDamage, int accuracy, int experience, int gold/* Inventory inventory*/)
     {
         this.Name = name;
         this.Level = level; 
@@ -35,9 +37,11 @@ public class Player
         this.Accuracy = accuracy;
         this.Experience = experience;
         this.Gold = gold;
-        this.Weapon = weapon;
-        this.Inventory = inventory;
+      //  this.Inventory = inventory;
     }
+    
+
+    
 
   
 

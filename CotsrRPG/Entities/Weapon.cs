@@ -1,4 +1,6 @@
-﻿namespace CotsrRPG;
+﻿using System.Text.Json.Serialization;
+
+namespace CotsrRPG;
 
 public class Weapon : Item
 {
@@ -12,11 +14,13 @@ public int Damage { get; set; }
     
     public int SellPrice { get; set; }
     
+    [JsonIgnore]
     public int BuyPrice { get; set; }
     
     public bool IsEquipped { get; set; }
     
     // Loot/Default items constructor
+    [JsonConstructor]
     public Weapon(string name, int level, string rarity, int damage, int criticalChance, int criticalDamage, int accuracy, int sellPrice, bool isEquipped) : base(name, level, rarity)
     {
         this.Damage = damage;
@@ -40,6 +44,8 @@ public int Damage { get; set; }
         this.IsEquipped = isEquipped;
         
     }
+    
+   
     
     
 }

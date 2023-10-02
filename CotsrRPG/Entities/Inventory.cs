@@ -1,15 +1,17 @@
-﻿namespace CotsrRPG;
+﻿using System.Text.Json.Serialization;
+
+namespace CotsrRPG;
 
 public class Inventory
 {
-    public List<Weapon> Weapons = new List<Weapon>();
+    public List<Weapon> Weapons { get; set; }
+    public List<Food> Food { get; set; }
     
-    public List<Food> Food = new List<Food>();
-    
+    [JsonConstructor]
     public Inventory(List<Weapon> weapons, List<Food> food)
     {
-        this.Weapons = weapons;
-        this.Food = food;
+        Weapons = weapons ?? new List<Weapon>();
+        Food = food ?? new List<Food>();
     }
     
 }

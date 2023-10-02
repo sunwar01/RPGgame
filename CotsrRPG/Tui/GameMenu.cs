@@ -4,7 +4,7 @@ namespace CotsrRPG.Tui;
 
 public class GameMenu
 {
-
+    public GameData gamedata = GameData.GetInstance();
     
     public string userInput;
     
@@ -41,7 +41,7 @@ public class GameMenu
             Console.WriteLine("Write (2) in the console, to enter the shop!");
         }
         
-        Console.WriteLine("1. Travel");
+        Console.WriteLine("1. Fight");
         if (isIntro)
         {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -66,7 +66,7 @@ public class GameMenu
                     
                 }
                 
-                // Travel
+                // Fight
                 
                 break;
             case "2":
@@ -91,7 +91,7 @@ public class GameMenu
                     wrongInputIntro();
                     
                 }
-                
+                Console.Clear();
                 var inventory = new tuiInventory();
                 inventory.showInventory();
                 
@@ -104,7 +104,8 @@ public class GameMenu
                     
                 }
                
-                // Exit and save game
+                gamedata.saveGame();
+                Console.Clear();
                 break;
             default:
                 if (isIntro)

@@ -22,6 +22,7 @@ public class BuyAndSell
             {
                 player.Gold -= item.BuyPrice;
                 inventory.Weapons.Add(item);
+                Console.WriteLine(name + " has been bought!");
                
             }
             else
@@ -35,6 +36,7 @@ public class BuyAndSell
             {
                 player.Gold -= item2.BuyPrice;
                 inventory.Food.Add(item2);
+                Console.WriteLine(name + " has been bought!");
              
             }
             else

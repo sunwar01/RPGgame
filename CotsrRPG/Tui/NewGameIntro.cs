@@ -32,6 +32,7 @@ public class NewGameIntro
         Console.WriteLine("Your first task, is to go to the local shop in the town, and buy a weapon and some food.");
         
         Thread.Sleep(10000);
+        Console.Clear();
 
         var gameMenu = new GameMenu();
         gameMenu.initializeGameMenu(true);

@@ -8,6 +8,7 @@ public class Item
     
     public string Rarity { get; set; }
     
+
     public Item(string name, int level, string rarity)
     {
         this.Name = name;

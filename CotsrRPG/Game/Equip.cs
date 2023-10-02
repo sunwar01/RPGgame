@@ -7,7 +7,7 @@ public class Equip
     
     public void EquipWeapon(string weaponName)
     {
-        // Find the weapon item in the inventory
+        
         var weaponItem = gamedata.gameDataInventory.Weapons.FirstOrDefault(weapon => weapon.Name.Equals(weaponName, StringComparison.OrdinalIgnoreCase));
 
         if (weaponItem != null)
@@ -16,14 +16,23 @@ public class Equip
   
             var lastEquippedWeapon = gamedata.gameDataInventory.Weapons.FirstOrDefault(weapon => weapon.IsEquipped == true);
             
+            Console.WriteLine("Damage before equip:" + gamedata.gameDataPlayer.Damage);
+            
             if (lastEquippedWeapon != null)
             {
+                Console.WriteLine("Debug Last equipped weapon found");
                 lastEquippedWeapon.IsEquipped = false;
                 gamedata.gameDataPlayer.Damage -= lastEquippedWeapon.Damage;
             }
             
             
-            gamedata.gameDataPlayer.Damage =+ weaponItem.Damage;
+            
+            var currentDamage = gamedata.gameDataPlayer.Damage;
+            
+            gamedata.gameDataPlayer.Damage = currentDamage + weaponItem.Damage;
+      
+            
+            Console.WriteLine("Damage after equip:" + gamedata.gameDataPlayer.Damage);
             
             weaponItem.IsEquipped = true;
             

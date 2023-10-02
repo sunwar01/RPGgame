@@ -111,7 +111,7 @@ public class tuiShop
                  
                     buyAndSell.buy("Rusty Sword");
                     
-                    Console.WriteLine("Rusty Sword has been bought!");
+                 
                     
                     Thread.Sleep(2000);
                     
@@ -124,7 +124,7 @@ public class tuiShop
                  
                  buyAndSell.buy("Rusty Mace");
                  
-                 Console.WriteLine("Rusty Mace has been bought!");
+           
                     
                  Thread.Sleep(2000);
                     
@@ -138,7 +138,7 @@ public class tuiShop
          
                  buyAndSell.buy("Rusty Axe");
                  
-                    Console.WriteLine("Rusty Axe has been bought!");
+                    
                  
                     Thread.Sleep(2000);
                  
@@ -151,7 +151,7 @@ public class tuiShop
         
                  buyAndSell.buy("Fine Sword");
                  
-                 Console.WriteLine("Fine Sword has been bought!");
+                 
                     
                  Thread.Sleep(2000);
                     
@@ -164,8 +164,7 @@ public class tuiShop
                 
                  buyAndSell.buy("Fine Mace");
                  
-                    Console.WriteLine("Fine Mace has been bought!");
-                 
+                
                     Thread.Sleep(2000);
                  
                     Console.Clear();
@@ -178,7 +177,7 @@ public class tuiShop
                     
                     buyAndSell.buy("Fine Axe");
                     
-                    Console.WriteLine("Fine Axe has been bought!");
+                    
                     
                     Thread.Sleep(2000);
                     
@@ -191,7 +190,7 @@ public class tuiShop
                     
                     buyAndSell.buy("Apple");
                     
-                    Console.WriteLine("Apple been bought!");
+                 
                     
                     Thread.Sleep(2000);
                     
@@ -204,7 +203,7 @@ public class tuiShop
                     
                     buyAndSell.buy("Bread");
                     
-                    Console.WriteLine("Bread has been bought!");
+               
                     
                     Thread.Sleep(2000);
                     
@@ -218,7 +217,7 @@ public class tuiShop
                     
                     buyAndSell.buy("Cheese");
                     
-                    Console.WriteLine("Cheese has been bought!");
+          
                     
                     Thread.Sleep(2000);
                     
@@ -231,7 +230,7 @@ public class tuiShop
                     
                     buyAndSell.buy("Ham");
                     
-                    Console.WriteLine("Ham has been bought!");
+              
                     
                     Thread.Sleep(2000);
                     
@@ -246,7 +245,7 @@ public class tuiShop
                     
                     buyAndSell.buy("Steak");
                     
-                    Console.WriteLine("Steak has been bought!");
+       
                     
                     Thread.Sleep(2000);
                     
@@ -259,7 +258,7 @@ public class tuiShop
                     
                     buyAndSell.buy("Fish");
                     
-                    Console.WriteLine("Fish has been bought!");
+                   
                     
                     Thread.Sleep(2000);
                     

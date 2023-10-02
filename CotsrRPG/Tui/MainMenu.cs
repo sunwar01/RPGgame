@@ -1,4 +1,6 @@
-﻿namespace CotsrRPG.Tui;
+﻿using CotsrRPG.Game;
+
+namespace CotsrRPG.Tui;
 
 
 
@@ -8,6 +10,8 @@ public class MainMenu
 {
    public string userInput;
 
+   public GameData gamedata = GameData.GetInstance();
+   
    public void initializeMainMenu()
    {
       
@@ -16,7 +20,7 @@ public class MainMenu
       
       Console.WriteLine("1. Start a new game");
       Console.WriteLine("2. Load a game");
-      Console.WriteLine("3. Exit the game");
+    
       
       
       
@@ -30,12 +34,9 @@ public class MainMenu
             newGame.initializeNewGameMenu();
             break;
          case "2":
-            // list all json files in saves folder
-            // start game with chosen save
             Console.Clear();
-            break;
-         case "3":
-            // Do nothing, should close if in a loop :))))
+            LoadGame loadGame = new LoadGame();
+            loadGame.InitializeLoadGameMenu();
             Console.Clear();
             break;
          default:
